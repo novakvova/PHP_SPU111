@@ -2,7 +2,7 @@
 $host = 'localhost'; // Replace with your database host
 $dbname = 'local.spu111.com'; // Replace with your database name
 $user = 'root'; // Replace with your database username
-$pass = ''; // Replace with your database password
+$pass = '123456'; // Replace with your database password
 
 try {
     // Creating a PDO instance
