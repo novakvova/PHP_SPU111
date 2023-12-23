@@ -2,6 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import ContainerDefault from "./components/containers/default/ContainerDefault.tsx";
 import NoMatch from "./components/pages/NoMatch.tsx";
 import CategoriesListPage from "./components/categories/list/CategoriesListPage.tsx";
+import CategoryCreatePage from "./components/categories/create/CategoryCreatePage.tsx";
 
 const App: React.FC = () => {
 
@@ -10,6 +11,7 @@ const App: React.FC = () => {
             <Routes>
                 <Route path="/" element={<ContainerDefault />}>
                     <Route index element={<CategoriesListPage />} />
+                    <Route path={'create'} element={<CategoryCreatePage />} />
 
                     <Route path="*" element={<NoMatch />} />
                 </Route>
