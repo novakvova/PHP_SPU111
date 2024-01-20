@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,5 @@ Route::delete("/categories/{id}", [CategoryController::class, "delete"]);
 Route::post("/categories/edit/{id}", [CategoryController::class, "edit"]);
 
 Route::post("/register",[AuthController::class, 'register']);
+
+Route::post("product",[ProductController::class, 'create']);
