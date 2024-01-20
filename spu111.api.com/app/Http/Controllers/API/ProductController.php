@@ -13,6 +13,22 @@ use Intervention\Image\ImageManager;
 class ProductController extends Controller
 {
     /**
+     * @OA\Get(
+     *     tags={"Product"},
+     *     path="/api/products",
+     *     @OA\Response(response="200", description="List Products.")
+     * )
+     */
+    public function getList() {
+//        $data = Product::all();
+        $data = Product::with('category')
+            ->with("product_images")
+            ->get();
+        return response()->json($data)
+            ->header('Content-Type', 'application/json; charset=utf-8');
+    }
+
+    /**
      * @OA\Post(
      *     tags={"Product"},
      *     path="/api/product",

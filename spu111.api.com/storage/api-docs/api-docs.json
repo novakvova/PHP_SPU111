@@ -229,6 +229,19 @@
                 }
             }
         },
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "9d1922c36585663020bb2c7d4b0db6d1",
+                "responses": {
+                    "200": {
+                        "description": "List Products."
+                    }
+                }
+            }
+        },
         "/api/product": {
             "post": {
                 "tags": [
