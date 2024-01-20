@@ -1,4 +1,4 @@
-export interface ICategoryCreate {
+export interface IProductCreate {
     name: string;
     image: File;
 }
